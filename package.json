@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/KaranChandekar/TheMailchimpAPI/issues"
   },
-  "homepage": "https://github.com/KaranChandekar/TheMailchimpAPI#readme"
+  "homepage": "https://github.com/KaranChandekar/TheMailchimpAPI#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
 }
