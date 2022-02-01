@@ -18,9 +18,23 @@ app.post("/", function (req, res) {
   var lastName = req.body.lName;
   var email = req.body.email;
 
-  console.log(firstName, lastName, email);
+  var data = {
+    members: [
+      {
+        email_address: email,
+        status: "subscribed",
+        merge_fields: {
+          FNAME: firstName,
+          LNAME: lastName,
+        },
+      },
+    ],
+  };
 });
 
 app.listen(3000, function () {
   console.log("Server is running on port 3000");
 });
+
+// API Key
+// c92ab399cdd92743d60b93ab4d63eff6-us14
