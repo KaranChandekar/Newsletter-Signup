@@ -40,6 +40,12 @@ app.post("/", function (req, res) {
     method: "POST",
     auth: "karanchandekar:c92ab399cdd92743d60b93ab4d63eff6-us14",
   };
+
+  const request = https.request(url, options, function (response) {
+    response.on("data", function (data) {
+      console.log(JSON.parse(data));
+    });
+  });
 });
 
 app.listen(3000, function () {
