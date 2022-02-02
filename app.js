@@ -4,6 +4,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
 const https = require("https");
+const { options } = require("request");
 
 const app = express();
 
@@ -31,7 +32,6 @@ app.post("/", function (req, res) {
       },
     ],
   };
-
   const jsonData = JSON.stringify(data);
   const url = "https://<dc>.api.mailchimp.com/3.0/";
 });
@@ -42,3 +42,6 @@ app.listen(3000, function () {
 
 // API Key
 // c92ab399cdd92743d60b93ab4d63eff6-us14
+
+// List Id
+// e32d240385
