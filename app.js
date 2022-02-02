@@ -36,6 +36,10 @@ app.post("/", function (req, res) {
 
   const url = "https://us14.api.mailchimp.com/3.0/lists/e32d240385";
 
+  const options = {
+    method: "POST",
+    auth: "karanchandekar:c92ab399cdd92743d60b93ab4d63eff6-us14",
+  };
 });
 
 app.listen(3000, function () {
