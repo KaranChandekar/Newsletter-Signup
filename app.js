@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const request = require("request");
 const https = require("https");
 const { options } = require("request");
+const { dirname } = require("path");
 
 const app = express();
 
@@ -43,9 +44,9 @@ app.post("/", function (req, res) {
 
   const request = https.request(url, options, function (response) {
     if (response.statusCode === 200) {
-      res.send("Successfully subscribed!");
+      res.sendFile(__dirname + "/success.html");
     } else {
-      res.send("There was an error with signing up, pleases try again!");
+      res.sendFile(__dirname + "/failure.html");
     }
     response.on("data", function (data) {
       console.log(JSON.parse(data));
